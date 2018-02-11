@@ -1,0 +1,16 @@
+<package format="2">
+    <name>goat_launch</name>
+    <version>0.1.0</version>
+    <description>Launchfiles for the GOAT.</description>
+    <maintainer email="gregjm@umich.edu">Gregory Meyer</maintainer>
+    <license>BSD 3-Clause License</license>
+
+    <url type="repository">https://github.com/umigv/goat_launch</url>
+    <author>Gregory Meyer</author>
+
+    <buildtool_depend>catkin</buildtool_depend>
+
+    <exec_depend>goat_urdf</exec_depend>
+    <exec_depend>joint_state_publisher</exec_depend>
+    <exec_depend>robot_state_publisher</exec_depend>
+</package>
