@@ -1,8 +1,11 @@
 <launch>
-    <param name="robot_description" textfile="$(find urdf_goat)/goat.urdf"/>
     <arg name="gui" default="False"/>
-    <arg name="sources" default="[\"/joint_states\"]"/>
-    <param name="use_gui" value="$(arg gui)"/>
+    <arg name="sources" default="[/wheel_state]"/>
+
+    <param name="robot_description" textfile="$(find urdf_goat)/urdf/goat.urdf"/>
+    <rosparam param="use_gui" subst_value="True">$(arg gui)</rosparam>
+    <rosparam param="source_list" subst_value="True">$(arg sources)</rosparam>
+
     <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher"/>
     <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>
 </launch>
