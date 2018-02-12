@@ -1,6 +1,6 @@
 ## Synopsis
 
-`goat_launch` contains supporting lauchfiles to run the GOAT.
+`goat_launch` contains supporting launchfiles to run the GOAT.
 
 ## Motivation
 
