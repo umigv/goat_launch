@@ -2,7 +2,7 @@
     <arg name="gui" default="False"/>
     <arg name="sources" default="[/wheel_state]"/>
 
-    <param name="robot_description" textfile="$(find urdf_goat)/urdf/goat.urdf"/>
+    <param name="robot_description" textfile="$(find goat_description)/robots/goat.urdf"/>
     <rosparam param="use_gui" subst_value="True">$(arg gui)</rosparam>
     <rosparam param="source_list" subst_value="True">$(arg sources)</rosparam>
 
