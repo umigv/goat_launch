@@ -1,0 +1,9 @@
+<!-- run hector_mapping without existing odometry -->
+<launch>
+    <node name="hector_mapping" pkg="hector_mapping" type="hector_mapping">
+        <param name="base_frame" value="base_link"/>
+        <param name="map_frame" value="map"/>
+        <param name="odom_frame" value="base_link"/>
+        <param name="map_pub_period" value="2.0"/>
+    </node>
+</launch>
