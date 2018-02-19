@@ -1,0 +1,26 @@
+<!-- runs robot_localization's ukf_localization_node -->
+<launch>
+    <node name="ukf_localization_node" pkg="robot_localization" type="ukf_localization_node">
+        <param name="frequency" value="20.0"/>
+        <param name="sensor_timeout" value="0.5"/>
+        <param name="two_d_mode" value="True"/>
+
+        <param name="map_frame" value="map"/>
+        <param name="odom_frame" value="odom"/>
+        <param name="base_link_frame" value="base_link"/>
+        <param name="world_frame" value="odom"/>
+
+        <param name="odom0" value="encoders/odom"/>
+
+        <!-- encoders have x, y, yaw, and time derivatives -->
+        <rosparam param="odom0_config">[true, true, false,
+                                        false, false, true,
+                                        true, true, false,
+                                        false, false, true,
+                                        false, false, false]</rosparam>
+
+        <param name="odom0_queue_size" value="10"/>
+
+        <param name="odom0_relative" value="true"/>
+    </node>
+</launch>

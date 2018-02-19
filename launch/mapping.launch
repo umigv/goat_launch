@@ -1,9 +1,10 @@
-<!-- run hector_mapping with odometry -->
+<!-- run gmapping -->
 <launch>
-    <node name="hector_mapping" pkg="hector_mapping" type="hector_mapping">
+    <node name="slam_gmapping" pkg="gmapping" type="slam_gmapping">
         <param name="base_frame" value="base_link"/>
         <param name="map_frame" value="map"/>
         <param name="odom_frame" value="odom"/>
-        <param name="map_pub_period" value="2.0"/>
+        <param name="maxUrange" value="5.4"/>
+        <param name="maxRange" value="6.0"/>
     </node>
 </launch>
