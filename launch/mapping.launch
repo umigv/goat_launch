@@ -1,10 +1,8 @@
 <!-- run gmapping -->
 <launch>
     <node name="slam_gmapping" pkg="gmapping" type="slam_gmapping">
-        <param name="base_frame" value="base_link"/>
-        <param name="map_frame" value="map"/>
-        <param name="odom_frame" value="odom"/>
-        <param name="maxUrange" value="5.4"/>
-        <param name="maxRange" value="6.0"/>
+        <!-- updates at 1/5 the resolution of the lidar -->
+        <param name="linearUpdate" value="0.75"/>
+        <param name="angularUpdate" value="0.1178"/>
     </node>
 </launch>
