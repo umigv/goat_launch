@@ -1,0 +1,30 @@
+<!-- runs phidgets_imu, imu_madgwick_filter, and transform_imu -->
+<launch>
+    <arg name="gui" default="False"/>
+    <arg name="sources" default="[/wheel_state]"/>
+
+    <param name="robot_description"
+           textfile="$(find goat_description)/robots/goat.urdf"/>
+    <rosparam param="use_gui" subst_value="True">$(arg gui)</rosparam>
+    <rosparam param="source_list" subst_value="True">$(arg sources)</rosparam>
+
+    <node name="phidgets_imu_node" pkg="phidgets_imu" type="phidgets_imu_node">
+        <param name="frame_id" value="imu_ned"/>
+        <param name="period" value="8.0"/>
+    </node>
+    <node name="imu_filter_node" pkg="imu_filter_madgwick"
+          type="imu_filter_node">
+        <param name="world_frame" value="enu"/>
+        <param name="use_mag" value="True"/>
+        <param name="use_magnetic_field_msg" value="True"/>
+        <param name="fixed_frame" value="odom"/>
+        <param name="publish_tf" value="True"/>
+
+        <remap from="imu/data" to="imu/data_ned"/>
+    </node>
+    <node name="transform_imu_node" pkg="transform_imu"
+          type="transform_imu_node">
+        <remap from="imu/data" to="imu/data_ned"/>
+        <remap from="imu/data_transformed" to="imu/data"/>
+    </node>
+</launch>
