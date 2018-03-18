@@ -1,5 +1,8 @@
 <!-- runs robot_localization's ukf_localization_node with imu and encoders -->
 <launch>
+    <include file="$(find goat_launch)/launch/encoders.launch"/>
+    <include file="$(find goat_launch)/launch/imu.launch"/>
+    
     <node name="ukf_localization_node" pkg="robot_localization" type="ukf_localization_node">
         <param name="frequency" value="20.0"/>
         <param name="sensor_timeout" value="0.5"/>

@@ -1,5 +1,7 @@
 <!-- runs phidgets_encoder encoder_odometry -->
 <launch>
+    <include file="$(find goat_launch)/launch/state.launch"/>
+
     <node name="phidgets_encoder_node" pkg="phidgets_encoder"
           type="phidgets_encoder_node">
         <param name="wheel_count" value="2"/>
