@@ -1,9 +1,9 @@
 <!-- runs phidgets_encoder encoder_odometry -->
 <launch>
     <node name="phidgets_encoder_node" pkg="phidgets_encoder"
-          type="phidgets_encoder">
+          type="phidgets_encoder_node">
         <param name="wheel_count" value="2"/>
-        <param name="rads_per_tick" value="-0.00436332313"/>
+        <param name="rads_per_tick" value="0.00436332313"/>
         <param name="publish_rate" value="20"/>
         <param name="polling_rate" value="20"/>
         <param name="buffer_length" value="8"/>

@@ -6,5 +6,10 @@
     <node name="imu_filter_node" pkg="imu_filter_madgwick"
           type="imu_filter_node">
         <param name="publish_tf" value="False"/>
+        <param name="world_frame" value="ned"/>
+    </node>
+
+    <node name="transform_imu_node" pkg="transform_imu"
+          type="transform_imu_node">
     </node>
 </launch>
