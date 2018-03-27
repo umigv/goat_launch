@@ -1,8 +1,7 @@
 <!-- run gmapping -->
 <launch>
-    <node name="slam_gmapping" pkg="gmapping" type="slam_gmapping">
-        <!-- updates at 1/5 the resolution of the lidar -->
-        <param name="linearUpdate" value="0.75"/>
-        <param name="angularUpdate" value="0.1178"/>
-    </node>
+    <rosparam command="load" file="$(find goat_launch)/params/mapping.yaml"/>
+
+    <node name="slam_gmapping" pkg="gmapping"
+        type="slam_gmapping" clear_params="true"/>
 </launch>

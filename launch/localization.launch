@@ -1,9 +1,5 @@
 <!-- runs robot_localization's ukf_localization_node with imu, gps, and encoders -->
 <launch>
-    <include file="$(find goat_launch)/launch/encoders.launch"/>
-    <include file="$(find goat_launch)/launch/gps.launch"/>
-    <include file="$(find goat_launch)/launch/imu.launch"/>
-
     <node name="ukf_localization_node" pkg="robot_localization" type="ukf_localization_node">
         <param name="frequency" value="20.0"/>
         <param name="sensor_timeout" value="0.5"/>
@@ -15,7 +11,7 @@
         <param name="world_frame" value="odom"/>
 
         <!-- encoder odometry -->
-        <param name="odom0" value="encoders/odom"/>
+        <param name="odom0" value="encoders/odometry"/>
         <rosparam param="odom0_config">[true, true, false,
                                         false, false, true,
                                         true, true, false,
@@ -34,7 +30,7 @@
         <param name="imu0_queue_size" value="10"/>
 
         <!-- gps odometry -->
-        <param name="odom1" value="odom/gps"/>
+        <param name="odom1" value="gps/odometry"/>
         <rosparam param="odom1_config">[true, true, false,
                                         false, false, false,
                                         false, false, false,
