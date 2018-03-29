@@ -11,7 +11,7 @@
 
     <node name="encoder_odometry_node" pkg="encoder_odometry"
           type="encoder_odometry_node" clear_params="true">
-        <remap from="joint_states" to="wheel_state"/>
+        <remap from="joint_states" to="encoders/state"/>
         <remap from="encoders/odom" to="encoders/odometry"/>
     </node>
 </launch>
