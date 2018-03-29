@@ -10,14 +10,7 @@
 
     <node name="joint_state_publisher" pkg="joint_state_publisher"
           type="joint_state_publisher" clear_params="true">
-<<<<<<< HEAD
           <rosparam param="use_gui" subst_value="True">$(arg use_gui)</rosparam>
-=======
-          <param name="rate" value="$(arg frequency)"/>
-          <rosparam param="use_gui" subst_value="True">$(arg use_gui)</rosparam>
-          <rosparam param="source_list"
-                    subst_value="True">$(arg sources)</rosparam>
->>>>>>> b1ff010a968375d0aeafc3b3a227e4ea3d9ae9d7
     </node>
 
     <node name="robot_state_publisher" pkg="robot_state_publisher"
