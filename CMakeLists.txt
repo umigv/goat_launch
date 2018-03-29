@@ -10,3 +10,6 @@ include_directories(${catkin_INCLUDE_DIRS})
 
 install(DIRECTORY launch/
         DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/launch)
+
+install(DIRECTORY params/
+        DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/params)

@@ -1,0 +1,25 @@
+phidgets_encoder_node:
+    serial_number: -1
+    frequency: 100.0
+    frame_id: "encoders"
+    rads_per_tick: -0.004363323 # 360 CPR, 4 ticks/count -> 1/4 deg/tick
+
+encoder_odometry_node:
+    frame_id: "odom"
+    child_frame_id: "encoders"
+    left_wheel_frame_id: "wheel0"
+    right_wheel_frame_id: "wheel1"
+    pose_covariance: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
+                      0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
+                      0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
+                      0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
+                      0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
+                      0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+    twist_covariance: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
+                       0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
+                       0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
+                       0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
+                       0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
+                       0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+    diameter: 0.3302 # 13" = 0.3302m
+    track: 0.5844

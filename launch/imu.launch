@@ -1,18 +1,16 @@
-<!-- runs phidgets_imu and imu_madgwick_filter -->
+<!-- runs phidgets_imu_node, transform_imu_node, and imu_filter_node -->
 <launch>
-    <node name="phidgets_imu_node" pkg="phidgets_imu" type="phidgets_imu_node">
-    </node>
+    <rosparam command="load" file="$(find goat_launch)/params/imu.yaml"/>
 
-    <node name="imu_filter_node" pkg="imu_filter_madgwick"
-          type="imu_filter_node">
-        <param name="publish_tf" value="False"/>
-        <param name="world_frame" value="enu"/>
-
-        <remap from="imu/data_raw" to="imu/data_raw_enu"/>
-        <remap from="imu/mag" to="imu/mag_enu"/>
-    </node>
+    <node name="phidgets_imu_node" pkg="phidgets_imu"
+          type="phidgets_imu_node" clear_params="true"/>
 
     <node name="transform_imu_node" pkg="transform_imu"
-          type="transform_imu_node">
+          type="transform_imu_node" clear_params="true"/>
+
+    <node name="imu_filter_node" pkg="imu_filter_madgwick"
+          type="imu_filter_node" clear_params="true">
+        <remap from="imu/data_raw" to="imu/data_raw_enu"/>
+        <remap from="imu/mag" to="imu/mag_enu"/>
     </node>
 </launch>

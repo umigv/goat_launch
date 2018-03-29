@@ -1,0 +1,16 @@
+<!-- runs nmea_serial_driver and navsat_transform_node -->
+<launch>
+    <arg name="port" default="/dev/ttyUSB0"/>
+
+    <rosparam command="load" file="$(find goat_launch)/params/gps.yaml"/>
+
+    <node name="nmea_serial_driver" pkg="nmea_navsat_driver"
+          type="nmea_serial_driver" clear_params="true">
+          <param name="port" value="$(arg port)"/>
+    </node>
+
+    <node name="navsat_transform_node" pkg="robot_localization"
+          type="navsat_transform_node" clear_params="true">
+          <remap from="odometry/gps" to="gps/odometry"/>
+    </node>
+</launch>
