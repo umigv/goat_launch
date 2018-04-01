@@ -8,7 +8,7 @@ We're all tired of running rosrun about a million times, setting parameters as w
 
 ## Installation
 
-Clone this repository into your `catkin` workspace, then run `catkin_make install`.
+Clone this repository into your `catkin` workspace, then run `catkin_make_isolated --install` and `source install_isolated/setup.bash`.
 
 ## Contributors
 
