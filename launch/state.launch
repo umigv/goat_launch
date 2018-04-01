@@ -14,5 +14,5 @@
     </node>
 
     <node name="robot_state_publisher" pkg="robot_state_publisher"
-          type="robot_state_publisher" clear_params="true"/>
+          type="robot_state_publisher" output="screen" clear_params="true"/>
 </launch>
