@@ -2,14 +2,17 @@
 <launch>
     <rosparam command="load" file="$(find goat_launch)/params/imu.yaml"/>
 
+    <!-- not required, could be simulating -->
     <node name="phidgets_imu_node" pkg="phidgets_imu"
-          type="phidgets_imu_node" clear_params="true"/>
+          type="phidgets_imu_node" output="screen" clear_params="true"/>
 
     <node name="transform_imu_node" pkg="transform_imu"
-          type="transform_imu_node" clear_params="true"/>
+          type="transform_imu_node" output="screen" required="true"
+          clear_params="true"/>
 
     <node name="imu_filter_node" pkg="imu_filter_madgwick"
-          type="imu_filter_node" clear_params="true">
+          type="imu_filter_node" output="screen" required="true"
+          clear_params="true">
         <remap from="imu/data_raw" to="imu/data_raw_enu"/>
         <remap from="imu/mag" to="imu/mag_enu"/>
     </node>
