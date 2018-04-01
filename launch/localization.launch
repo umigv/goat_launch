@@ -7,5 +7,6 @@
               file="$(find goat_launch)/params/localization_igev.yaml"/>
 
     <node name="ukf_localization_node" pkg="robot_localization"
-          type="ukf_localization_node"/>
+          type="ukf_localization_node" output="screen" required="true"
+          clear_params="true"/>
 </launch>
