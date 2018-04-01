@@ -13,16 +13,16 @@ slam_gmapping:
     lsigma: 0.075
     ogain: 3.0
     lskip: 0
-    minimumScore: 0.0
+    minimumScore: 50.0
     srr: 0.1
     srt: 0.2
     str: 0.1
     stt: 0.2
-    linearUpdate: 1.0
-    angularUpdate: 0.5
+    linearUpdate: 0.1
+    angularUpdate: 0.1
     temporalUpdate: -1.0 # do not perform temporal updates
     resampleThreshold: 0.5
-    particles: 20
+    particles: 30
     xmin: -121.9 # arena size is 100 x 200 ft, or 30.48m x 60.96m
     ymin: -121.9
     xmax: 121.9
@@ -34,4 +34,4 @@ slam_gmapping:
     lasamplestep: 0.05
     transform_publish_period: 0.05
     occ_thresh: 0.25
-    maxRange: 8.1 # set to > maxURange to mark cells in that range clear
+    maxRange: 7.9
