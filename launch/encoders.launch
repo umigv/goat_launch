@@ -1,7 +1,5 @@
 <!-- runs phidgets_encoder encoder_odometry -->
 <launch>
-    <include file="$(find goat_launch)/launch/state.launch"/>
-
     <rosparam command="load" file="$(find goat_launch)/params/encoders.yaml"/>
 
     <!-- not required, could be simulating -->
