@@ -6,7 +6,7 @@ ukf_localization_node:
                    false, false, false,
                    false, false, false]
     odom0_queue_size: 10
-    odom0_relative: true
+    odom0_relative: false
     odom0_differential: true
 
     imu0: "imu/data"
