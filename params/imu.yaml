@@ -6,21 +6,17 @@ phidgets_imu_node:
     magnetic_field_stdev: 0.00000012
 
 transform_imu_node:
-    frame_id: imu
+    frame_id: "imu"
 
-imu_filter_node:
-    gain: 0.1
-    zeta: 0.0
-    mag_bias_x: 0.0
-    mag_bias_y: 0.0
-    mag_bias_z: 0.0
-    orientation_stdev: 0.0
-    world_frame: enu
+complementary_filter_node:
+    gain_acc: 0.01
+    gain_mag: 0.01
+    bias_alpha: 0.01
+    do_bias_estimation: true
+    do_adaptive_gain: true
     use_mag: true
-    use_magnetic_field_msg: true
-    fixed_frame: odom
+    fixed_frame: "odom"
     publish_tf: false
     reverse_tf: false
     constant_dt: 0.0
     publish_debug_topics: false
-    stateless: false
