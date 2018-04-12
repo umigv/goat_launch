@@ -1,0 +1,18 @@
+<!-- full slam sensor stack -->
+<launch>
+    <arg name="laser_port" default="/dev/ttyUSB0"/>
+
+    <include file="$(find goat_launch)/launch/imu.launch"/>
+
+    <include file="$(find goat_launch)/launch/encoders.launch"/>
+
+    <include file="$(find goat_launch)/launch/laser.launch">
+        <arg name="port" value="$(arg laser_port)"/>
+    </include>
+
+    <include file="$(find goat_launch)/launch/state.launch"/>
+
+    <include file="$(find goat_launch)/launch/localization_imu_encoders.launch"/>
+
+    <include file="$(find goat_launch)/launch/mapping.launch"/>
+</launch>
