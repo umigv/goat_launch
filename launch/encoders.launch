@@ -10,8 +10,5 @@
 
     <node name="encoder_odometry_node" pkg="encoder_odometry"
           type="encoder_odometry_node" output="screen" clear_params="true"
-          required="true">
-        <remap from="joint_states" to="encoders/state"/>
-        <remap from="encoders/odom" to="encoders/odometry"/>
-    </node>
+          required="true"/>
 </launch>
