@@ -1,10 +1,10 @@
 ukf_localization_node:
-    odom0: "encoders/odometry"
-    odom0_config: [true, true, false,
-                   false, false, true,
-                   false, false, false,
-                   false, false, false,
-                   false, false, false]
-    odom0_queue_size: 10
-    odom0_relative: false
-    odom0_differential: true
+    twist0: "encoders/twist"
+    twist0_config: [false, false, false,
+                    false, false, false,
+                    true, true, false,
+                    false, false, true,
+                    false, false, false]
+    twist0_queue_size: 10
+    twist0_relative: false
+    twist0_differential: false
