@@ -22,7 +22,7 @@ slam_gmapping:
     angularUpdate: 0.1
     temporalUpdate: -1.0 # do not perform temporal updates
     resampleThreshold: 0.5
-    particles: 30
+    particles: 50
     xmin: -121.9 # arena size is 100 x 200 ft, or 30.48m x 60.96m
     ymin: -121.9
     xmax: 121.9
