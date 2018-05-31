@@ -1,10 +1,14 @@
 <launch>
 
+	<arg name="goal_id_in" default=""/>
+	<arg name="filename" default="test.txt"/>
+	<arg name="threshold_in" default="0.5"/>
+
 	<node name="make_goal" pkg="make_goal" type="make_goal" output="screen" clear_params="true">
 
-		<param name="goal_id" value=""/>
-		<param name="goals_filename" value="$(dirname)/../params/test.txt"/>
-		<param name="threshold" value="1"/>
+		<param name="goal_id" value="$(arg goal_id_in)"/>
+		<param name="goals_filename" value="$(dirname)/../params/$(arg filename)"/>
+		<param name="threshold" value="$(arg threshold_in)"/>
 
 	</node>
 
