@@ -1,0 +1,11 @@
+<launch>
+
+	<node name="make_goal" pkg="make_goal" type="make_goal" output="screen" clear_params="true">
+
+		<param name="goal_id" value=""/>
+		<param name="goals_filename" value="$(dirname)/../params/test.txt"/>
+		<param name="threshold" value="1"/>
+
+	</node>
+
+</launch>
