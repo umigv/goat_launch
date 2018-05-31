@@ -25,6 +25,6 @@
 
     <node name="zed_state_publisher" pkg="robot_state_publisher"
           type="robot_state_publisher" required="true">
-        <remap from="robot_description" to="zed_description"/>
+        <remap from="robot_description" to="camera_description"/>
     </node>
 </launch>
