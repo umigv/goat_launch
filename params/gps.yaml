@@ -1,5 +1,4 @@
 nmea_serial_driver:
-    baud: 115200
     useRMC: false
 
 navsat_transform_node:
