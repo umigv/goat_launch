@@ -1,12 +1,12 @@
 zed_wrapper_node:
     zed_id: 0
     camera_model: 0
-    publish_tf: true
+    publish_tf: false
 
     odometry_frame: "odom"
-    base_frame: "camera_center"
-    camera_frame: "camera_left"
-    depth_frame: "camera_depth"
+    base_frame: "zed_center"
+    camera_frame: "zed_left_camera"
+    depth_frame: "zed_depth_camera"
 
     sensing_mode: 0
     odometry_db: ""
