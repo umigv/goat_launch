@@ -13,5 +13,7 @@
         <param name="dev" value="$(arg joy_device)"/>
     </node>
 
-    <node name="teleop_node" pkg="teleop_twist_joy" type="teleop_node" required="true"/>
+    <node name="teleop_node" pkg="teleop_twist_joy" type="teleop_node" required="true">
+        <remap from="cmd_vel" to="teleop/cmd_vel"/>
+    </node>
 </launch>
