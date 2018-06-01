@@ -7,7 +7,7 @@
 	<node name="make_goal" pkg="make_goal" type="make_goal" output="screen" clear_params="true">
 
 		<param name="goal_id" value="$(arg goal_id_in)"/>
-		<param name="goals_filename" value="$(dirname)/../params/$(arg filename)"/>
+		<param name="goals_filename" value="$(find goat_launch)/params/$(arg filename)"/>
 		<param name="threshold" value="$(arg threshold_in)"/>
 
 	</node>
