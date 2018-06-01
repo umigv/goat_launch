@@ -28,4 +28,4 @@ ukf_localization_node:
                    false, false, false]
     odom0_queue_size: 10
     odom0_relative: true
-    odom0_differential: true
+    odom0_differential: false
