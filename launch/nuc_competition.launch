@@ -8,4 +8,7 @@
 
     <node name="cmd_vel_selector_node" pkg="cmd_vel_selector"
           type="cmd_vel_selector_node" output="screen" clear_params="true"/>
+
+    <node name="cartographer_occupancy_grid_node" pkg="cartographer_ros"
+          type="cartographer_occupancy_grid_node" output="screen" clear_params="true"/>
 </launch>
