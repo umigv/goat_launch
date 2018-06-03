@@ -10,7 +10,7 @@ encoder_odometry_node:
     right_wheel_frame: "wheel1"
     rate: 100.0
     diameter: 0.3302 # 13" ~= 0.3302m
-    track: 0.6096 # 24" ~= 0.6096m
+    track: 0.5969 # 23.5" ~= 0.5969m
     covariance: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
                  0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
                  0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
