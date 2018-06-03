@@ -13,3 +13,6 @@ install(DIRECTORY launch/
 
 install(DIRECTORY params/
         DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/params)
+
+install(DIRECTORY config/
+        DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/config)
