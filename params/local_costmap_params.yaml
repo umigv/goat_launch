@@ -11,7 +11,7 @@ local_costmap:
   plugins:
     - {name: static_map, type: "costmap_2d::StaticLayer"}
     - {name: obstacles, type: "costmap_2d::VoxelLayer"}
-    # - {name: white_lines, type: "obstacle_detector::WhiteLineCostmapLayer"}
+    - {name: white_lines, type: "obstacle_detector::WhiteLineCostmapLayer"}
     - {name: inflation, type: "costmap_2d::InflationLayer"}
   static_map:
     map_topic: "map"
