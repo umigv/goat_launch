@@ -1,5 +1,5 @@
 ukf_localization_node:
-    imu0: "imu/data"
+    imu0: "imu/data_filtered"
     imu0_config: [false, false, false,
                   true,  true,  true,
                   false, false, false,

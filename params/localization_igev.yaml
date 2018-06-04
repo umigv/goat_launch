@@ -9,7 +9,7 @@ ukf_localization_node:
     twist0_relative: false
     twist0_differential: false
 
-    imu0: "imu/data"
+    imu0: "imu/data_filtered"
     imu0_config: [false, false, false,
                   true, true, true,
                   false, false, false,

@@ -17,5 +17,6 @@
           type="navsat_transform_node" output="screen" required="true"
           clear_params="true">
           <remap from="odometry/gps" to="gps/odometry"/>
+          <remap from="imu/data" to="imu/data_filtered"/>
     </node>
 </launch>

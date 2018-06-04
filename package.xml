@@ -16,6 +16,7 @@
     <exec_depend>gmapping</exec_depend>
     <exec_depend>goat_description</exec_depend>
     <exec_depend>imu_complementary_filter</exec_depend>
+    <exec_depend>imu_temporal_filter_node</exec_depend>
     <exec_depend>joint_state_publisher</exec_depend>
     <exec_depend>joy</exec_depend>
     <exec_depend>make_goal</exec_depend>
