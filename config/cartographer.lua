@@ -36,9 +36,9 @@ options = {
   pose_publish_period_sec = 0.05,
   trajectory_publish_period_sec = 0.05,
   rangefinder_sampling_ratio = 1.0,
-  odometry_sampling_ratio = 0.2,
+  odometry_sampling_ratio = 1.0,
   fixed_frame_pose_sampling_ratio = 1.0,
-  imu_sampling_ratio = 0.08,
+  imu_sampling_ratio = 1.0,
   landmarks_sampling_ratio = 1.0,
 }
 
