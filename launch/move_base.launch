@@ -6,6 +6,8 @@
         <rosparam file="$(find goat_launch)/params/global_costmap_params.yaml" command="load"/>
         <rosparam file="$(find goat_launch)/params/base_local_planner_params.yaml" command="load"/>
         <rosparam file="$(find goat_launch)/params/base_global_params.yaml" command="load"/>
+        
         <remap from="cmd_vel" to="autonomous/cmd_vel"/>
+        <remap from="odom" to="odometry/filtered"/>
     </node>
 </launch>
